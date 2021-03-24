@@ -1,0 +1,19 @@
+{
+  "name": "restsample",
+  "connector": "rest",
+  "options": {
+     "headers": {
+         "accept": "application/json",
+         "content-type": "application/json"
+     }
+  },
+  "operations": [{
+     "template": {
+        "method": "GET",
+        "url": "http://api.openweathermap.org/data/2.5/weather?q={city}&appid=f1c87fe7119317cf84d2101a20741734"
+     },
+     "functions": {
+        "getrestdata": ["city"]
+     }
+  }]
+}
