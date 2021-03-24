@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Ciudad</th>
+            <th>Temperatura</th>
+            <th>Hora</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ciudad of ciudades">
+            <td>{{ciudad.name}}</td>
+            <td>{{ciudad.main.temp}}</td>
+            <td>{{ciudad.timezone}}</td>
+            <td>{{ciudad.coord.lat}}</td>
+            <td>{{ciudad.coord.lon}}</td>
+        </tr>
+    </tbody>
+</table>
