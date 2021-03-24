@@ -15,14 +15,17 @@ export class HomeComponent implements OnInit {
   constructor(private tiempoService: TiempoService) { }
 
   ngOnInit(): void {
-    this.getPaises();
+    this.getCiudades();
   }
 
-  getPaises(){
+  /**
+   * Obtiene la lista de ciudades con sus carasterísticas
+   */
+  getCiudades(){
 
     for(const item in this.ciudadesNombre) {
       let auxCiudad;
-      this.tiempoService.getPais(this.ciudadesNombre[item]).subscribe(
+      this.tiempoService.getCiudad(this.ciudadesNombre[item]).subscribe(
         result => {
             if(result.cod != 200){
                 console.log(result);
